@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./images/logo1.png" type="image/x-icon" />
+
+    <title>Form Html</title>
+  </head>
+  <body>
+    <!-- Forms -->
+
+    <form action="#">
+      <div class="form-wrap">
+        <label for="userName"> user Name </label>
+        <input type="text" name="userName" id="userName" required />
+      </div>
+
+      <div class="form-wrap">
+        <label for="password"> Password</label>
+        <input type="password" name="password" id="password" required />
+      </div>
+
+      <div class="form-wrap">
+        <input
+          type="number"
+          name="number"
+          id="number"
+          placeholder="Contact Number "
+          required
+        />
+      </div>
+
+      <div class="form-wrap">
+        <select name="" id="" required>
+          <option value="none">-- Please choose one --</option>
+          <option value="one">One</option>
+          <option value="two">Two</option>
+        </select>
+      </div>
+
+      <div class="form-wrap">
+        <textarea
+          name="descript"
+          id="descript"
+          cols="30"
+          rows="10"
+          placeholder="Enter Min 150 Words "
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-wrap">
+        <!--  -->
+        <label for="Male"> Male </label>
+        <input type="radio" name="gender" id="Male" value="male" />
+        <label for="Male"> FeMale </label>
+        <input type="radio" name="gender" id="FeMale" value="female" />
+      </div>
+
+      <div class="form-wrap">
+        <!--  -->
+        <label for="Hyd"> Hyderabad </label>
+        <input type="checkbox" name="Hyd" id="Hyd" />
+
+        <label for="Bang"> Banglore </label>
+        <input type="checkbox" name="Bang" id="Bang" />
+
+        <label for="Pune"> Pune </label>
+        <input type="checkbox" name="Pune" id="Pune" />
+      </div>
+
+      <div class="form-wrap">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="email"
+          required
+        />
+      </div>
+
+      <div class="form-wrap">
+        <input type="color" name="" id="" />
+        <input type="date" name="" id="" />
+        <input type="file" name="" id="" />
+      </div>
+      <input type="submit" value="Sign Up" />
+      <input type="button" value="Sign in" />
+      <button type="submit">Sign Up</button>
+      <button type="button">Sign In</button>
+    </form>
+  </body>
+</html>
