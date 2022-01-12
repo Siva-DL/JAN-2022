@@ -1,0 +1,14 @@
+div {
+  /* cssProperty: value  */
+  font-size: 20px;
+  width: 200px;
+}
+div#div1 {
+  border: 5px double greenyellow;
+}
+#div2 {
+  margin: auto;
+}
+.bold-text {
+  font-weight: 900;
+}
