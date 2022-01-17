@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      #main {
+        /* background-color: rgba(165, 125, 125, 1); */
+        background-image: url(./images/bg.jpg);
+        background-repeat: no-repeat; /*repeat-x | repeat-y*/
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        color: #ffff;
+        height: 150vh; /*vh- view port he   ight*/
+      }
+      #main_header {
+        width: 100%;
+        padding: 10px;
+        background: rgb(253 112 60 / 58%);
+      }
+      .d-inline-block {
+        display: inline-block;
+      }
+      .w-20 {
+        width: 20%;
+      }
+      .w-80 {
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <header id="main_header">
+        <div class="logo d-inline-block w-20">
+          <h2>My Logo</h2>
+        </div>
+        <nav class="d-inline-block w-70">
+          <ul class="w-80">
+            <li class="d-inline-block">Home</li>
+            <li class="d-inline-block">About</li>
+            <li class="d-inline-block">Gallery</li>
+          </ul>
+        </nav>
+      </header>
+      <!-- <p></p> -->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis enim
+      pariatur officiis assumenda quasi harum voluptatem corporis illum, facilis
+      nihil ipsum tempora sapiente ratione nisi, itaque aliquam modi neque quas!
+    </main>
+  </body>
+</html>

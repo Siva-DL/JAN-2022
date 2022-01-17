@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        width: 75%;
+        display: inline-block;
+      }
+      .box {
+        width: 200px;
+        /* height: 100px; */
+        background-color: slateblue;
+        color: #fff;
+        display: inline-block;
+        text-align: justify;
+      }
+      /* Margin */
+      #one {
+        box-sizing: border-box; /*remove extra space occipied by your border-box properties*/
+        /* margin: 10px; */ /*short form */
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        /* margin: top right bottom left; */
+        margin: 10px 20px 30px 40px;
+        /* margin: top/bottom left/right */
+        margin: 20px auto;
+
+        /* padding */
+        padding: 10px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+        padding: 10px 20px 30px 40px;
+        padding: 20px 40px;
+
+        /* border */
+        /*       width  style  color*/
+        border: 10px solid red;
+
+        border-top-width: 10px;
+        border-top-style: dashed;
+        border-top-color: greenyellow;
+
+        border-right-width: 10px;
+        border-right-style: groove;
+        border-right-color: blueviolet;
+
+        border-bottom-width: 10px;
+        border-bottom-style: dotted;
+        border-bottom-color: crimson;
+
+        border-left-width: 10px;
+        border-left-style: double;
+        border-left-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="one" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+        recusandae eligendi veniam soluta? Assumenda saepe omnis velit quis ad
+        quibusdam perferendis, molestiae possimus hic corrupti incidunt et nobis
+        fugiat totam?
+      </div>
+    </main>
+    <div id="two" class="box">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, hic?
+    </div>
+  </body>
+</html>
