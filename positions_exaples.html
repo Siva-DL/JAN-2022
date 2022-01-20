@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/removeDefaults.css" />
+    <style>
+      body {
+        overflow: auto;
+      }
+      header {
+        width: 20%;
+        height: 100vh;
+        background-color: brown;
+        color: #fff;
+        text-align: center;
+        /* position: fixed; */
+        /* left: 0;
+        top: 0;
+        z-index: 999999; */
+        float: left;
+      }
+      header ul {
+        margin-top: 100px;
+      }
+      header ul li {
+        width: 100%;
+        background-color: darkred;
+        padding: 10px;
+        margin-top: 2px;
+      }
+      header ul li:hover {
+        background-color: rgb(151, 22, 22);
+      }
+      header ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      main {
+        /* padding-top: 50px; */
+      }
+      section {
+        width: 100%;
+        height: 50px;
+        background-color: coral;
+        color: #fff;
+        text-align: center;
+        position: sticky;
+        top: 0px;
+        z-index: 0;
+      }
+      article {
+        height: 100vh;
+        font-size: 20px;
+        background-color: cadetblue;
+        color: #fff;
+        /* padding-top: 50px; */
+        width: 80%;
+        float: left;
+        /* margin-left: 20%; */
+        /* overflow: auto; */
+        overflow-y: scroll;
+      }
+      .b-radius {
+        width: 75px;
+        height: 75px;
+        margin: 25px auto;
+        border: 3px solid #000;
+        /* border-radius: 50%; */
+        border-top-left-radius: 50%;
+        border-top-right-radius: 25%;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="b-radius">
+          <img src="./images/user.png" alt="user" width="50" />
+        </div>
+        <ul>
+          <li>
+            <a href="#home"> HOME </a>
+          </li>
+          <li>
+            <a href="#about"> About </a>
+          </li>
+          <li>
+            <a href="#gallery"> Gallery </a>
+          </li>
+          <li>
+            <a href="#contact"> Contact </a>
+          </li>
+        </ul>
+      </header>
+      <!-- <section>header 2</section> -->
+      <article>
+        <div
+          style="height: 150vh; background-color: rgb(99, 190, 99); color: #fff"
+          id="home"
+        >
+          Home
+        </div>
+        <div
+          style="
+            height: 150vh;
+            background-color: rgb(175, 152, 75);
+            color: rgb(0, 0, 0);
+          "
+          id="about"
+        >
+          About
+        </div>
+        <div
+          style="height: 150vh; background-color: darkgreen; color: #fff"
+          id="gallery"
+        >
+          Gallery
+        </div>
+        <div
+          style="height: 150vh; background-color: rgb(52, 91, 163); color: #fff"
+          id="contact"
+        >
+          Contact
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
