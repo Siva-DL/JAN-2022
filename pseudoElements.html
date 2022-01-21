@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul li:first-child {
+        background-color: darkred;
+      }
+
+      /* ul li:nth-child(2n + 2) {
+        background-color: lime;
+      } */
+
+      ul li:nth-child(odd) {
+        background-color: lime;
+      }
+
+      ul li:last-child {
+        background-color: darkred;
+      }
+      div p:only-child {
+        background-color: magenta;
+      }
+      input:read-only {
+        background-color: maroon;
+        color: #fff;
+      }
+      .main_Header {
+        width: 200px;
+        margin: auto;
+        padding-bottom: 10px;
+        /* border-bottom: 1px solid; */
+        /* text-decoration: underline; */
+        text-align: center;
+        position: relative;
+      }
+      .main_Header::before {
+        content: ' " ';
+        /* position: absolute;
+        width: 70px;
+        height: 3px;
+        left: 65px;
+        top: 20px;
+        background-color: maroon; */
+      }
+      .main_Header::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: maroon;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+      }
+      .select {
+        width: 300px;
+      }
+      .select::selection {
+        background-color: mediumaquamarine;
+        color: midnightblue;
+      }
+      .select::first-letter {
+        font-size: 50px;
+        font-style: italic;
+        color: orange;
+      }
+      .select::first-line {
+        color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>&#8221;Home0</li>
+      <li>Home1</li>
+      <li>Home</li>
+      <li>Home</li>
+      <li>Home</li>
+      <li>Home</li>
+      <li>Home</li>
+      <li>Homeasdasda</li>
+    </ul>
+
+    <div>
+      <p>asdasdas</p>
+      <span>aasdasda</span>
+      <input type="text" value="asda" readonly />
+    </div>
+
+    <div class="main_Header">Header</div>
+    <p class="select">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+      obcaecati possimus dolor nesciunt quidem explicabo doloribus, quam fugit
+      numquam animi illum mollitia natus voluptatum nulla iste similique!
+      Doloremque, debitis vitae?
+    </p>
+  </body>
+</html>
