@@ -240,8 +240,14 @@ var users = [
 console.log(users[0].name);
 
 // loops : FOR
+var res = "";
 for (var i = 0; i < 10; i++) {
-  console.log(users[i].name);
+  res += "<h2>" + users[i].name + "</h2>";
+  //   console.log(users[i].name);
+
+  //   Table to print some of these values;
 }
 
 // <h2> username </h2>
+
+console.log(res);
