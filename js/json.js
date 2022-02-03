@@ -251,3 +251,7 @@ for (var i = 0; i < 10; i++) {
 // <h2> username </h2>
 
 console.log(res);
+
+var Div = document.getElementsByTagName("div")[0];
+
+Div.innerHTML = res;

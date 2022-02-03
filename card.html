@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        width: 300px;
+        margin: 100px auto;
+        background: #ccc;
+        padding: 10px;
+        box-shadow: 0px 0px 5px 0px #555;
+        border-radius: 5px;
+      }
+      .cardHeader {
+        padding: 10px;
+        text-align: center;
+        line-height: 30px;
+        min-height: 300px;
+      }
+      .cardHeader img {
+        width: 100%;
+      }
+      .cardBody {
+        padding: 10px;
+        text-align: center;
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="cardHeader">
+        <h1>Card Header</h1>
+      </div>
+      <div class="cardBody">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
+          tempore similique recusandae? Minima, id necessitatibus. Architecto
+          nostrum eligendi temporibus deserunt repellendus error ullam repellat
+          inventore totam? Libero aliquid natus nesciunt?
+        </p>
+      </div>
+    </div>
+    <script>
+      var _cardHeader = document.getElementsByClassName("cardHeader")[0];
+
+      var Img = "<img src='./images/cardImg.jpg' alt='cardImage' />";
+
+      _cardHeader.innerHTML = Img; // render a string based element into html
+      //   _cardHeader.innerText = Img; // render a string based element into String
+      console.log(Img);
+
+      setInterval(function () {
+        console.log("test");
+      }, 5000);
+
+      //   ---------------------------- Task -----------------------------------------
+      //   in array have some Image Urls
+      ex: Images = ["1.jpg", "2.jpg"];
+
+      // pass this Urls to Img tag in JS
+      ex: "img src='1.jpg'", "img src='2.jpg'";
+
+      // using InnerHTML bind this image tag to an element;
+      ex: "<div>img</div>";
+    </script>
+  </body>
+</html>

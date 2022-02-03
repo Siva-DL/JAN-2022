@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#"> <span id="demo"> some text </span></a>
+      </li>
+      <li class="demo">asdasd</li>
+    </ul>
+    <script>
+      var _a = document.getElementsByTagName("a")[0]; // element Name
+      console.log(_a);
+      var span = document.getElementById("demo");
+      console.log(span);
+      var demo = document.getElementsByClassName("demo");
+      console.log(demo[0]);
+
+      _a.href = "https://git-scm.com/";
+      span.id = "demo1";
+      demo[0].className = "demo demo1";
+
+      //   setAttribute();
+      //   getAttribute();
+
+      demo[0].setAttribute("id", "newId");
+
+      console.log(demo[0].getAttribute("id"));
+    </script>
+  </body>
+</html>
