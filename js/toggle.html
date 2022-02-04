@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/removeDefaults.css" />
+    <style>
+      * {
+        transition: 0.4s;
+      }
+      body {
+        overflow: hidden;
+      }
+      section {
+        float: left;
+      }
+      #left {
+        width: 20%;
+        height: 100vh;
+        background: lightsalmon;
+      }
+      #right {
+        width: 80%;
+        height: 100vh;
+        background: lightcoral;
+        overflow: auto;
+      }
+      #toggler {
+        position: fixed;
+        width: 100px;
+        padding: 10px;
+        text-align: center;
+        line-height: 20px;
+        right: 20px;
+        top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="btnWrap">
+        <button id="toggler" type="button">Toggle</button>
+      </div>
+
+      <section id="left"></section>
+      <section id="right">
+        <article style="height: 1200vh"></article>
+      </section>
+    </main>
+    <script src="./toggle.js"></script>
+  </body>
+</html>

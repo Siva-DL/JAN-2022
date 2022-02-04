@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p><input type="text" placeholder="Name" id="ItemName" value="siva" /></p>
+      <p><input type="number" placeholder="Price" id="Itemprice" /></p>
+      <p><input type="text" placeholder="Location" id="DevlieryLoc" /></p>
+      <p>
+        <button type="button" id="addItems">Add to Sales</button>
+      </p>
+    </div>
+    <script>
+      var ItemName = document.querySelector("#ItemName");
+      var Itemprice = document.querySelector("#Itemprice");
+      var DevlieryLoc = document.querySelector("#DevlieryLoc");
+      var addItems = document.querySelector("#addItems");
+
+      console.log(ItemName.value);
+      addItems.onclick = function () {
+        console.log(ItemName.value, Itemprice.value, DevlieryLoc.value);
+
+        // {name: 'siva', price: '10', loc: 'Hyd'}
+
+        // var salesJson = [
+        //   { name: "siva", price: "10", loc: "Hyd" },
+        //   { name: "siva", price: "10", loc: "Hyd" },
+        // ];
+
+        // Bind these Values into a Card in HTML
+      };
+    </script>
+  </body>
+</html>

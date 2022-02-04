@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        transition: 1s;
+      }
       div h2 {
         width: 300px;
         height: 100px;
@@ -14,14 +17,21 @@
         border: 1px solid;
         display: inline-block;
       }
+      div {
+        width: 50%;
+        margin: auto;
+      }
+      div img {
+        width: 100%;
+      }
     </style>
   </head>
   <body>
-    <div>
+    <div id="bind">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum,
       veritatis?
     </div>
     <!-- <script src="./js/datatypes.js"></script> -->
-    <script src="./js/json.js"></script>
+    <script src="./js/changeImg.js"></script>
   </body>
 </html>
