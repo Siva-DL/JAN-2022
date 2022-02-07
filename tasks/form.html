@@ -8,127 +8,295 @@
     <link rel="stylesheet" href="../css/removeDefaults.css" />
     <link rel="stylesheet" href="all.min.css" />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;500;900&display=swap");
+      * {
+        font-family: "Exo 2", sans-serif;
+      }
       main {
-        background: url(../images/pexels-christina-morillo-1181681.jpg)
-          no-repeat left center fixed;
-        background-size: cover;
+        /* width: 90%; */
+        /* margin: auto; */
         height: 100vh;
-        overflow: auto;
-      }
-      #mainWrap {
-        width: 35%;
-        margin: 65px auto;
-        height: 80vh;
-        background: #a2a2a2a6;
         position: relative;
-        box-shadow: 2px 1px 10px 1px rgb(94, 94, 94);
-        border-radius: 5px;
       }
-      #user {
-        width: 100px;
-        height: 100px;
-        background: #fff;
-        border-radius: 50%;
-        padding: 10px 0px 0px 10px;
-        position: absolute;
-        top: -50px;
-        left: 40%;
-      }
-      #user img {
-        width: 90%;
-        border-radius: 50%;
-      }
-      #formWrap {
-        padding: 75px;
-      }
-      .formEle {
-        width: 90%;
-        padding: 10px;
-        border: 1px solid #888;
-        /* box-shadow: 0px 0px 5px 1px #ccc; */
-        margin-top: 10px;
-        position: relative;
-        background: #fff;
-      }
-      input[type="text"],
-      input[type="email"],
-      input[type="password"],
-      select,
-      button {
-        width: 100%;
-        padding: 0px 18px 0px 35px;
-        /* line-height: 40px; */
-        border: none;
-        outline: none;
-        /* border: 1px solid #ccc; */
-      }
-      .fas {
-        position: absolute;
-        font-size: 18px;
-        /* padding: 2px; */
-      }
-      /* .fas::before {
+      main::before {
         content: "";
         position: absolute;
-        width: 1px;
-        height: 40px;
-        background: #ccc;
-        left: 30px;
-        top: -10px;
-      } */
+        height: 100vh;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        background: url(../images/leaf.png) no-repeat left center;
+        background-size: contain;
+        z-index: -1;
+        opacity: 0.7;
+      }
+      .formWrap {
+        width: 50%;
+        float: left;
+        height: 100vh;
+        padding: 10px;
+        position: relative;
+      }
+      .formContainer {
+        width: 75%;
+        margin: 70px auto;
+        background-color: rgba(5, 135, 137, 0.5);
+        height: 80vh;
+        overflow: auto;
+        padding: 20px 0px 20px 0px;
+        border-radius: 10px;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .register {
+        margin-bottom: 50px;
+      }
+      .inputWraper {
+        width: 70%;
+        margin: 20px auto;
+        background: #fff;
+        border: 1px solid #777;
+        padding-left: 10px;
+        position: relative;
+        border-radius: 3px;
+        box-shadow: 1px 0px 3px 0px #444;
+      }
+      .commonWraper {
+        width: 70%;
+        margin: 10px auto;
+        padding: 5px;
+      }
+      .form-ele .input {
+        width: 90%;
+        line-height: 40px;
+        border: none;
+        background: none;
+        border-radius: none;
+        padding-left: 40px;
+        outline: none;
+      }
+      .form-ele i {
+        position: absolute;
+        font-size: 18px;
+        line-height: 40px;
+        border-right: 1px solid;
+        padding-right: 15px;
+      }
+      select {
+        width: 90%;
+        border: none;
+        padding: 10px;
+        outline: none;
+      }
+      .error {
+        color: red;
+      }
+      .bgRight {
+        width: 50%;
+        height: 100vh;
+        float: left;
+        background: url(../images//kisspng-vecto.png) no-repeat center,
+          rgba(5, 135, 137, 0.5);
+        background-size: 90%;
+      }
+      .btn-warning {
+        width: 100%;
+        padding: 10px;
+        background-color: #f2a41e;
+        font-size: 18px;
+        color: #333;
+        border: none;
+        box-shadow: 0px 0px 3px 0px #333;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .btn-warning:hover {
+        background-color: #f1b245;
+      }
+      .color-warning {
+        color: #078689;
+      }
+      .d-none {
+        display: none;
+      }
+      .clear {
+        clear: both;
+      }
     </style>
   </head>
   <body>
     <main>
-      <article id="mainWrap">
-        <div id="user">
-          <img src="./images (1).png" alt="user" />
-        </div>
-        <section id="formWrap">
-          <div class="formEle">
-            <i class="fas fa-address-card"></i>
+      <div class="formWrap">
+        <div class="formContainer">
+          <div class="register">
+            <h2 class="text-center">Register</h2>
+          </div>
+
+          <div class="inputWraper">
+            <div class="form-ele">
+              <i class="fas fa-user color-warning"></i>
+              <input
+                type="text"
+                placeholder="User Name"
+                id="username"
+                class="input"
+              />
+              <span class="fas fa-exclamation-triangle error d-none"></span>
+            </div>
+          </div>
+          <div class="inputWraper">
+            <div class="form-ele">
+              <i class="fas fa-envelope color-warning"></i>
+              <input
+                type="email"
+                placeholder="Email"
+                id="email"
+                class="input"
+              />
+              <span class="fas fa-exclamation-triangle error d-none"></span>
+            </div>
+          </div>
+          <div class="inputWraper">
+            <div class="form-ele">
+              <i class="fas fa-lock color-warning"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                id="password"
+                class="input"
+              />
+              <span class="fas fa-exclamation-triangle error d-none"></span>
+            </div>
+          </div>
+          <div class="inputWraper">
+            <div class="form-ele">
+              <i class="fas fa-phone-square-alt color-warning"></i>
+              <input
+                type="text"
+                placeholder="Contact Number"
+                id="contact"
+                class="input"
+              />
+              <span class="fas fa-exclamation-triangle error d-none"></span>
+            </div>
+          </div>
+          <div class="commonWraper">
             <input
-              type="text"
-              placeholder="username"
-              name="usernmae"
-              id="username"
+              type="radio"
+              name="gender"
+              id="male"
+              value="male"
+              class="gender"
             />
-          </div>
-          <div class="formEle">
+            <span style="padding-right: 50px"> Male </span>
+
             <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              id="password"
+              type="radio"
+              name="gender"
+              id="female"
+              value="Female"
+              class="gender"
             />
+            <span> Female </span>
           </div>
-          <div class="formEle">
-            <input type="email" placeholder="Email" name="email" id="email" />
-          </div>
-          <div class="formEle">
-            <input type="radio" name="gender" value="male" /> Male
-            <input type="radio" name="gender" value="male" /> Female
-          </div>
-          <div class="formEle">
-            <select name="country" id="country">
+          <div class="inputWraper">
+            <select name="state" id="country" class="input">
               <option value="none">Select a City</option>
-              <option value="hyd">Hyderabad</option>
-              <option value="bng">Banglore</option>
-              <option value="del">Delhi</option>
+              <option value="Hyd">Hyderabad</option>
+              <option value="Bng">Banglore</option>
+              <option value="mum">Mumbai</option>
             </select>
+            <span class="fas fa-exclamation-triangle error d-none"></span>
           </div>
-          <div class="formEle">
-            <input type="checkbox" name="agree" value="agree" /> I agree
-            <p>
-              <input type="checkbox" name="receive" value="receive" /> I Want to
-              Recive
-            </p>
+          <div class="commonWraper">
+            <input type="checkbox" name="consent" id="consent" /> I agree with
+            terms and conditions
           </div>
-          <div class="formEle">
-            <button type="button">Register</button>
+          <div class="commonWraper">
+            <button type="button" class="btn-warning">Register</button>
           </div>
-        </section>
-      </article>
+        </div>
+      </div>
+      <div class="bgRight"></div>
+      <div class="clear"></div>
     </main>
+    <div id="bindData"></div>
+    <script>
+      // String:  /^[a-zA-Z]+$/g
+      // number:  /^[0-9]+$/g
+      // email:  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/g;
+      // password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/g
+
+      // 1. validate Form Fields
+      // 2. get the Values from Each Field.
+      // 3. create an Object with the form Fields
+      // 4. push the Object Array
+      // 5. Display it in HTML
+
+      var uName = document.querySelector("#username");
+      var email = document.querySelector("#email");
+      var password = document.querySelector("#password");
+      var contact = document.querySelector("#contact");
+      var gender = document.getElementsByClassName("gender");
+      var country = document.querySelector("#country");
+      var consent = document.querySelector("#consent");
+
+      var btn = document.querySelector(".btn-warning");
+
+      var userhub = [];
+      btn.onclick = function () {
+        var genderValue = "";
+        for (var i = 0; i < gender.length; i++) {
+          console.log(gender[i].checked);
+          if (gender[i].checked) {
+            console.log(gender[i].value);
+            genderValue = gender[i].value;
+          }
+        }
+
+        if (uName.value == "") {
+          console.log("Please enter user Name!");
+        } else if (email.value == "") {
+          console.log("Please enter a valid Email");
+        } else if (password.value == "") {
+          console.log("Please enter a password");
+        } else if (contact.value == "") {
+          console.log("Please enter a contact");
+        } else if (genderValue == "") {
+          console.log("Please choose a gender");
+        } else if (country.value == "none") {
+          console.log("Please choose a City");
+        } else if (!consent.checked) {
+          console.log("Please accept the consent");
+        } else {
+          alert(" Thank you!");
+
+          var userDetails = {
+            userName: uName.value,
+            email: email.value,
+            password: password.value,
+            contact: contact.value,
+            gender: genderValue,
+            country: country.value,
+            consent: consent.checked,
+          };
+
+          console.log(userDetails);
+
+          userhub.push(userDetails);
+          console.log(userhub);
+          bindDataInfo(userhub);
+        }
+      };
+
+      function bindDataInfo(arr) {
+        var ele = "";
+        for (var i = 0; i < arr.length; i++) {
+          ele += "<h1 class='error'>" + arr[i].userName + "</h1>";
+        }
+        document.querySelector("#bindData").innerHTML = ele;
+      }
+    </script>
   </body>
 </html>
