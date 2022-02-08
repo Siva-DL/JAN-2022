@@ -226,7 +226,7 @@
       // String:  /^[a-zA-Z]+$/g
       // number:  /^[0-9]+$/g
       // email:  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/g;
-      // password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/g
+      // password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/g eg: asaA#1212
 
       // 1. validate Form Fields
       // 2. get the Values from Each Field.
@@ -244,6 +244,12 @@
 
       var btn = document.querySelector(".btn-warning");
 
+      var StrPattern = /^[a-zA-Z]{4,}$/g;
+      var numberPattern = /^[0-9]{10}$/g;
+      var passWordPattern =
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/g;
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/g;
+
       var userhub = [];
       btn.onclick = function () {
         var genderValue = "";
@@ -255,15 +261,29 @@
           }
         }
 
-        if (uName.value == "") {
+        if (!uName.value.match(StrPattern)) {
           console.log("Please enter user Name!");
-        } else if (email.value == "") {
+          document.getElementsByClassName("error")[0].style.display = "inline";
+        } else if (!email.value.match(emailPattern)) {
+          document.getElementsByClassName("error")[0].style.display = "none";
+          document.getElementsByClassName("error")[1].style.display = "inline";
           console.log("Please enter a valid Email");
-        } else if (password.value == "") {
+        } else if (!password.value.match(passWordPattern)) {
+          document.getElementsByClassName("error")[0].style.display = "none";
+          document.getElementsByClassName("error")[1].style.display = "none";
+          document.getElementsByClassName("error")[2].style.display = "inline";
           console.log("Please enter a password");
-        } else if (contact.value == "") {
+        } else if (!contact.value.match(numberPattern)) {
+          document.getElementsByClassName("error")[0].style.display = "none";
+          document.getElementsByClassName("error")[1].style.display = "none";
+          document.getElementsByClassName("error")[2].style.display = "none";
+          document.getElementsByClassName("error")[3].style.display = "inline";
           console.log("Please enter a contact");
         } else if (genderValue == "") {
+          document.getElementsByClassName("error")[0].style.display = "none";
+          document.getElementsByClassName("error")[1].style.display = "none";
+          document.getElementsByClassName("error")[2].style.display = "none";
+          document.getElementsByClassName("error")[3].style.display = "none";
           console.log("Please choose a gender");
         } else if (country.value == "none") {
           console.log("Please choose a City");
@@ -293,7 +313,7 @@
       function bindDataInfo(arr) {
         var ele = "";
         for (var i = 0; i < arr.length; i++) {
-          ele += "<h1 class='error'>" + arr[i].userName + "</h1>";
+          ele += "<h1>" + arr[i].userName + "</h1>";
         }
         document.querySelector("#bindData").innerHTML = ele;
       }

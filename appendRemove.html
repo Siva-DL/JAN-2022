@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main h2 {
+        display: inline-block;
+        width: 200px;
+        min-width: 200px;
+        border: 1px solid;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="name" id="name" placeholder="userName" />
+    <button type="button" id="AddBtn">Add</button>
+    <div id="main"></div>
+
+    <script>
+      var AddBtn = document.getElementById("AddBtn");
+      var _name = document.getElementById("name");
+      var main = document.getElementById("main");
+
+      AddBtn.onclick = function () {
+        try {
+          var userNameValue = _name.value;
+          var h2 = document.createElement("h2");
+          var closeBtn = document.createElement("button");
+          closeBtn.innerText = "X";
+          closeBtn.setAttribute("type", "button");
+          closeBtn.className = "close";
+          h2.innerText = userNameValue;
+          h2.appendChild(closeBtn);
+          if (false) throw new SyntaxError("appending is not happend");
+          console.log(h2);
+
+          main.appendChild(h2);
+        } catch (err) {
+          console.log("err", err);
+        }
+        closeBtn.onclick = function () {
+          //   debugger;
+          var remove_h2 = this.parentNode;
+
+          main.removeChild(remove_h2);
+        };
+      };
+    </script>
+  </body>
+</html>
