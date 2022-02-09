@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: blanchedalmond;
+      }
+      nav {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        position: relative;
+      }
+      .log {
+        padding: 10px;
+      }
+      ul {
+        list-style: none;
+        width: 95%;
+        display: none;
+        position: absolute;
+        top: 40px;
+        background-color: aliceblue;
+      }
+
+      ul li {
+        width: 100%;
+        padding: 10px;
+        list-style: none;
+        text-align: center;
+      }
+
+      @media screen and (min-width: 768px) {
+        ul {
+          list-style: none;
+          width: 50%;
+          display: flex;
+          position: relative;
+          top: 0px;
+          background-color: transparent;
+        }
+        ul li {
+          width: 100px;
+        }
+        .button {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="log">Logo</div>
+        <div class="button">Menu</div>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Gallery</li>
+        </ul>
+      </nav>
+    </header>
+    <script>
+      document.querySelector(".button").onclick = function () {
+        // document.getElementsByTagName
+        if (document.getElementsByTagName("ul")[0].style.display == "none") {
+          document.getElementsByTagName("ul")[0].style.display = "block";
+        } else {
+          document.getElementsByTagName("ul")[0].style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

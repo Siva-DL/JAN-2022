@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      body {
+        height: 100vh;
+      }
+      ul {
+        display: flex;
+        /* flex-direction: column-reverse; */
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      ul li {
+        list-style: none;
+        /* width: ; */
+        flex-grow: 1;
+        border: 1px solid;
+        text-align: center;
+        order: 2;
+      }
+      ul li:last-child {
+        flex-grow: 3;
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Home 1</li>
+      <li>Home 2</li>
+      <!-- <li>Home 3</li> -->
+    </ul>
+  </body>
+</html>
