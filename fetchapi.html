@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li data-href="layout.html">layout</li>
+      <li data-href="index.html">index</li>
+    </ul>
+    <main id="main"></main>
+    <script>
+      // GET
+      var LI = document.getElementsByTagName("li");
+      for (var i = 0; i < LI.length; i++) {
+        LI[i].onclick = function () {
+          console.log(this.getAttribute("data-href"));
+
+          fetch(this.getAttribute("data-href"), {
+            method: "get",
+            headers: {
+              "Content-type":
+                "application/x-www-form-urlencoded; chareset-UTF-8",
+            },
+          })
+            .then(function (res) {
+              //   console.log(res.text());
+              return res.text();
+            })
+            .then(function (data) {
+              console.log(data);
+
+              document.querySelector("#main").innerHTML = data;
+            })
+            .catch(function (err) {
+              console.log("err", err);
+            });
+        };
+      }
+    </script>
+  </body>
+</html>
